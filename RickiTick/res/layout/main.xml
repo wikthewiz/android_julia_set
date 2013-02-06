@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp" >
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:onClick="onStopClick"
+            android:text="@string/stop" 
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:onClick="onStartClick"
+            android:text="@string/start" 
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+        
+        <Button
+            android:id="@+id/step_button"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:onClick="onStepOneClick"
+            android:text="@string/step" 
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" >
+
+        <se.gizm0.rickitick.JuliaSetFractalView
+            android:id="@+id/julia_set_fractal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:visibility="visible"/>
+    </FrameLayout>
+
+</LinearLayout>
